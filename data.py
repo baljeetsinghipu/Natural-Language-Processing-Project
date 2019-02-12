@@ -2,7 +2,6 @@ import os
 import numpy as np
 import torch
 
-
 def get_batch(batch, word_vec, emb_dim=300):
     # sent in batch in decreasing order of lengths (bsize, max_len, word_dim)
     lengths = np.array([len(x) for x in batch])
