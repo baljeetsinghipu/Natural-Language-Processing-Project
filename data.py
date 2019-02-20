@@ -14,7 +14,6 @@ def get_batch(batch, word_vec, emb_dim=300):
 
     return torch.from_numpy(embed).float(), lengths
 
-
 def get_word_dict(sentences):
     # create vocab of words
     word_dict = {}
