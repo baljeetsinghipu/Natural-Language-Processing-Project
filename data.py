@@ -16,6 +16,7 @@ def get_batch(batch, word_vec, emb_dim=300):
 
 def get_word_dict(sentences):
     # create vocab of words
+	
     word_dict = {}
     for sent in sentences:
         for word in sent.split():
