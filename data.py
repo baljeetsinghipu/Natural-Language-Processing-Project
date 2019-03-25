@@ -26,6 +26,7 @@ def get_word_dict(sentences):
     word_dict['</s>'] = ''
     word_dict['<p>'] = ''
     return word_dict
+	
 
 
 def get_glove(word_dict, glove_path):
