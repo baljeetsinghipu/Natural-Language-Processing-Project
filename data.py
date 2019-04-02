@@ -49,7 +49,6 @@ def build_vocab(sentences, glove_path):
     print('Vocab size : {0}'.format(len(word_vec)))
     return word_vec
 
-
 def get_nli(data_path):
     s1 = {}
     target = {}
