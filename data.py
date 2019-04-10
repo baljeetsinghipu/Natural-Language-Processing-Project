@@ -70,6 +70,7 @@ def get_nli(data_path):
         print('** {0} DATA : Found {1} pairs of {2} sentences.'.format(
                 data_type.upper(), len(s1[data_type]['sent']), data_type))
 
+				
     train = {'s1': s1['train']['sent'],
              'label': target['train']['data']}
     dev = {'s1': s1['dev']['sent'],
