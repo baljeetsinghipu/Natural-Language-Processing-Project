@@ -6,6 +6,7 @@ import torch.nn as nn
 class LSTMEncoder(nn.Module):
     def __init__(self, config):
         super(LSTMEncoder, self).__init__()
+		
         self.bsize = config['bsize']
         self.word_emb_dim = config['word_emb_dim']
         self.enc_lstm_dim = config['enc_lstm_dim']
