@@ -26,6 +26,7 @@ class LSTMEncoder(nn.Module):
 
         # Sort by length (keep idx)
         sent_len, idx_sort = np.ascontiguousarray(np.sort(sent_len)[::-1]), np.argsort(-sent_len)
+		
         sent = sent.index_select(1, torch.LongTensor(idx_sort))
 
         # Handling padding in Recurrent Networks
