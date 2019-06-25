@@ -1,0 +1,126 @@
+
+togrep : ['--n_epochs=15', '--dpout_fc=1', '--batch_size=64', '--fc_dim=32', '--n_enc_layers=128', '--dpout_model=1', '--num_layers=3', '--n_lstm_layers=1']
+
+Namespace(batch_size=64, dpout_fc=1.0, dpout_model=1.0, enc_lstm_dim=128, encoder_type='LSTMEncoder', fc_dim=32, n_classes=2, n_enc_layers=128, n_epochs=15, n_lstm_layers=1, nlipath='/content/drive/My Drive/Project/dataset/stsa/', nonlinear_fc=0, optimizer='adam', outputdir='/content/drive/My Drive/Project/savedir/', outputmodelname='/content/drive/My Drive/Project/model.pickle', pool_type='max', seed=1234, word_emb_dim=300, word_emb_path='/content/drive/My Drive/Project/dataset/GloVe/glove.840B.300d.txt')
+** TRAIN DATA : Found 6920 pairs of train sentences.
+** DEV DATA : Found 872 pairs of dev sentences.
+** TEST DATA : Found 1821 pairs of test sentences.
+{}
+Found 16517(/17576) words with glove vectors
+Vocab size : 16517
+/usr/local/lib/python3.6/dist-packages/torch/nn/modules/rnn.py:46: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=1.0 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+NLINet(
+  (encoder): LSTMEncoder(
+    (enc_lstm): LSTM(300, 128, dropout=1.0, bidirectional=True)
+    (fc): Linear(in_features=256, out_features=128, bias=True)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=128, out_features=32, bias=True)
+    (1): Dropout(p=1.0)
+    (2): Linear(in_features=32, out_features=32, bias=True)
+    (3): Linear(in_features=32, out_features=32, bias=True)
+    (4): Dropout(p=1.0)
+    (5): ReLU()
+    (6): Linear(in_features=32, out_features=32, bias=True)
+    (7): Linear(in_features=32, out_features=2, bias=True)
+  )
+)
+---------------------------
+
+TRAINING : Epoch 1
+results : epoch 1 ; loss: 75.48; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 1
+togrep : results : epoch 1 ; mean accuracy valid :50.9174
+saving model at epoch 1
+
+TRAINING : Epoch 2
+results : epoch 2 ; loss: 75.48; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 2
+togrep : results : epoch 2 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 3
+results : epoch 3 ; loss: 75.48; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 3
+togrep : results : epoch 3 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 4
+results : epoch 4 ; loss: 75.47; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 4
+togrep : results : epoch 4 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 5
+results : epoch 5 ; loss: 75.48; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 5
+togrep : results : epoch 5 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 6
+results : epoch 6 ; loss: 75.48; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 6
+togrep : results : epoch 6 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 7
+results : epoch 7 ; loss: 75.47; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 7
+togrep : results : epoch 7 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 8
+results : epoch 8 ; loss: 75.47; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 8
+togrep : results : epoch 8 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 9
+results : epoch 9 ; loss: 75.46; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 9
+togrep : results : epoch 9 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 10
+results : epoch 10 ; loss: 75.46; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 10
+togrep : results : epoch 10 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 11
+results : epoch 11 ; loss: 75.49; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 11
+togrep : results : epoch 11 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 12
+results : epoch 12 ; loss: 75.45; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 12
+togrep : results : epoch 12 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 13
+results : epoch 13 ; loss: 75.47; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 13
+togrep : results : epoch 13 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 14
+results : epoch 14 ; loss: 75.47; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 14
+togrep : results : epoch 14 ; mean accuracy valid :50.9174
+
+TRAINING : Epoch 15
+results : epoch 15 ; loss: 75.46; mean accuracy train : 52.1676
+
+VALIDATION : Epoch 15
+togrep : results : epoch 15 ; mean accuracy valid :50.9174
+
+TEST : Epoch 16
+
+VALIDATION : Epoch 1000000.0
+finalgrep : accuracy valid : 50.9174
+finalgrep : accuracy test : 49.9176

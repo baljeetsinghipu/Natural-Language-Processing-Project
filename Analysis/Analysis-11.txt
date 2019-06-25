@@ -1,0 +1,126 @@
+
+togrep : ['--n_epochs=15', '--dpout_fc=0.5', '--batch_size=64', '--fc_dim=30', '--n_enc_layers=128']
+
+Namespace(batch_size=64, dpout_fc=0.5, dpout_model=0.0, enc_lstm_dim=128, encoder_type='LSTMEncoder', fc_dim=30, n_classes=2, n_enc_layers=128, n_epochs=15, n_lstm_layers=1, nlipath='/content/drive/My Drive/Project/dataset/stsa/', nonlinear_fc=0, optimizer='adam', outputdir='/content/drive/My Drive/Project/savedir/', outputmodelname='/content/drive/My Drive/Project/model.pickle', pool_type='max', seed=1234, word_emb_dim=300, word_emb_path='/content/drive/My Drive/Project/dataset/GloVe/glove.840B.300d.txt')
+** TRAIN DATA : Found 6920 pairs of train sentences.
+** DEV DATA : Found 872 pairs of dev sentences.
+** TEST DATA : Found 1821 pairs of test sentences.
+{}
+Found 16517(/17576) words with glove vectors
+Vocab size : 16517
+NLINet(
+  (encoder): LSTMEncoder(
+    (enc_lstm): LSTM(300, 128)
+    (fc): Linear(in_features=256, out_features=128, bias=True)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=128, out_features=30, bias=True)
+    (1): Linear(in_features=30, out_features=15, bias=True)
+    (2): Linear(in_features=15, out_features=7, bias=True)
+    (3): Linear(in_features=7, out_features=3, bias=True)
+    (4): Linear(in_features=3, out_features=30, bias=True)
+    (5): Linear(in_features=30, out_features=2, bias=True)
+  )
+)
+---------------------------
+
+TRAINING : Epoch 1
+results : epoch 1 ; loss: 57.79; mean accuracy train : 72.5867
+
+VALIDATION : Epoch 1
+togrep : results : epoch 1 ; mean accuracy valid :79.4725
+saving model at epoch 1
+
+TRAINING : Epoch 2
+results : epoch 2 ; loss: 45.08; mean accuracy train : 81.1994
+
+VALIDATION : Epoch 2
+togrep : results : epoch 2 ; mean accuracy valid :80.7339
+saving model at epoch 2
+
+TRAINING : Epoch 3
+results : epoch 3 ; loss: 41.69; mean accuracy train : 82.9046
+
+VALIDATION : Epoch 3
+togrep : results : epoch 3 ; mean accuracy valid :79.4725
+
+TRAINING : Epoch 4
+results : epoch 4 ; loss: 38.06; mean accuracy train : 84.2775
+
+VALIDATION : Epoch 4
+togrep : results : epoch 4 ; mean accuracy valid :81.7661
+saving model at epoch 4
+
+TRAINING : Epoch 5
+results : epoch 5 ; loss: 33.88; mean accuracy train : 86.4884
+
+VALIDATION : Epoch 5
+togrep : results : epoch 5 ; mean accuracy valid :81.6514
+
+TRAINING : Epoch 6
+results : epoch 6 ; loss: 30.56; mean accuracy train : 87.8468
+
+VALIDATION : Epoch 6
+togrep : results : epoch 6 ; mean accuracy valid :82.2248
+saving model at epoch 6
+
+TRAINING : Epoch 7
+results : epoch 7 ; loss: 26.28; mean accuracy train : 90.2457
+
+VALIDATION : Epoch 7
+togrep : results : epoch 7 ; mean accuracy valid :82.6835
+saving model at epoch 7
+
+TRAINING : Epoch 8
+results : epoch 8 ; loss: 21.66; mean accuracy train : 91.9364
+
+VALIDATION : Epoch 8
+togrep : results : epoch 8 ; mean accuracy valid :82.3394
+
+TRAINING : Epoch 9
+results : epoch 9 ; loss: 16.87; mean accuracy train : 94.0607
+
+VALIDATION : Epoch 9
+togrep : results : epoch 9 ; mean accuracy valid :81.3073
+
+TRAINING : Epoch 10
+results : epoch 10 ; loss: 14.33; mean accuracy train : 94.7543
+
+VALIDATION : Epoch 10
+togrep : results : epoch 10 ; mean accuracy valid :81.9954
+
+TRAINING : Epoch 11
+results : epoch 11 ; loss: 8.41; mean accuracy train : 97.2399
+
+VALIDATION : Epoch 11
+togrep : results : epoch 11 ; mean accuracy valid :81.1927
+
+TRAINING : Epoch 12
+results : epoch 12 ; loss: 8.27; mean accuracy train : 97.2543
+
+VALIDATION : Epoch 12
+togrep : results : epoch 12 ; mean accuracy valid :81.3073
+
+TRAINING : Epoch 13
+results : epoch 13 ; loss: 6.0; mean accuracy train : 98.1647
+
+VALIDATION : Epoch 13
+togrep : results : epoch 13 ; mean accuracy valid :80.9633
+
+TRAINING : Epoch 14
+results : epoch 14 ; loss: 5.54; mean accuracy train : 98.1503
+
+VALIDATION : Epoch 14
+togrep : results : epoch 14 ; mean accuracy valid :81.8807
+
+TRAINING : Epoch 15
+results : epoch 15 ; loss: 2.62; mean accuracy train : 99.1908
+
+VALIDATION : Epoch 15
+togrep : results : epoch 15 ; mean accuracy valid :81.422
+
+TEST : Epoch 16
+
+VALIDATION : Epoch 1000000.0
+finalgrep : accuracy valid : 82.6835
+finalgrep : accuracy test : 84.514
